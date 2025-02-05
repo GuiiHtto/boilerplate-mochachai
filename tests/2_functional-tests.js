@@ -80,6 +80,9 @@ suite('Functional Tests with Zombie.js', function () {
       assert.fail();
 
       done();
+      after(function() {
+        chai.request(server)
+        .get('/')
     });
   });
 });
