@@ -83,8 +83,3 @@ suite('Functional Tests with Zombie.js', function () {
     });
   });
 });
-
-after(function() {
-  chai.request(server)
-  .get('/')
-});
