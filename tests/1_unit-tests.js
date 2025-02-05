@@ -166,3 +166,13 @@ suite('Unit Tests', function () {
 
   // -----------------------------------------------------------------------------
 });
+
+app.route('/travellers')
+  .put((req, res) => {
+    console.log('Request body:', req.body);
+    travellers(req, res);
+  });
+  after(function() {
+    chai.request(server)
+    .get('/')
+  });
